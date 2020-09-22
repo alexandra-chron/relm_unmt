@@ -74,8 +74,8 @@ Before pretraining an HMR (high-monolingual-resource) monolingual MLM, make sure
 
 After that, run the following (example for En):
 ```
-chmod 755 ~/relm/preprocess.py
-chmod 755 ~/relm/get_data_mlm_pretraining.sh
+chmod 755 ~/relm_unmt/preprocess.py
+chmod 755 ~/relm_unmt/get_data_mlm_pretraining.sh
 ./get_data_mlm_pretraining.sh --src en
 ```
 
