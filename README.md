@@ -100,7 +100,7 @@ python train.py                            \
 --data_path ./data/en/                     \
 --lgs 'en'                                 \
 --mlm_steps 'en'                           \
---emb_dim 1024                             \ 
+--emb_dim 1024                             \
 --n_layers 6                               \
 --n_heads 8                                \
 --dropout '0.1'                            \
@@ -111,7 +111,7 @@ python train.py                            \
 --optimizer 'adam,lr=0.0001'               \
 --epoch_size 200000                        \
 --validation_metrics valid_en_mlm_ppl      \
---stopping_criterion 'valid_en_mlm_ppl,10' \
+--stopping_criterion 'valid_en_mlm_ppl,10' 
 
 ## There are other parameters that are not specified here (see train.py).
 ```
@@ -141,18 +141,18 @@ You will need to give this value to the `--increase_vocab_by` argument so that y
 ### 2. Fine-tune it on both the LMR and HMR languages
 
 ```
-python train.py                            \ 
---exp_name finetune_en_mlm_mk              \ 
---dump_path ./dumped/                      \ 
---reload_model 'mono_mlm_en_68m.pth'       \ 
+python train.py                            \
+--exp_name finetune_en_mlm_mk              \
+--dump_path ./dumped/                      \
+--reload_model 'mono_mlm_en_68m.pth'       \
 --data_path ./data/mk-en/                  \
---lgs 'en-mk'                              \ 
+--lgs 'en-mk'                              \
 --mlm_steps 'mk,en'                        \
 --emb_dim 1024                             \
---n_layers 6                               \ 
+--n_layers 6                               \
 --n_heads 8                                \
 --dropout 0.1                              \
---attention_dropout 0.1                    \ 
+--attention_dropout 0.1                    \
 --gelu_activation true                     \
 --batch_size 32                            \
 --bptt 256                                 \
@@ -162,7 +162,7 @@ python train.py                            \
 --stopping_criterion valid_mk_mlm_ppl,10   \
 --increase_vocab_for_lang en               \
 --increase_vocab_from_lang mk              \
---increase_vocab_by NUMBER (see ./data/mk-en/vocab.mk-en-ext-by-$NUMBER)
+--increase_vocab_by NUMBER #(see ./data/mk-en/vocab.mk-en-ext-by-$NUMBER)
 ```
 
 ###3. Train a UNMT model (encoder and decoder initialized with RE-LM)
@@ -173,10 +173,10 @@ python train.py                            \
 --dump_path ./dumped/                      \
 --reload_model 'finetune_en_mlm_mk.pth,finetune_en_mlm_mk.pth' \
 --data_path './data/mk-en'                 \
---lgs en-mk                                \ 
+--lgs en-mk                                \
 --ae_steps en,mk                           \
 --bt_steps en-mk-en,mk-en-mk               \
---word_shuffle 3                           \ 
+--word_shuffle 3                           \
 --word_dropout 0.1                         \
 --word_blank 0.1                           \
 --lambda_ae 0:1,100000:0.1,300000:0        \
@@ -193,10 +193,10 @@ python train.py                            \
 --optimizer adam_inverse_sqrt,beta1=0.9,beta2=0.98,lr=0.0001 \
 --epoch_size 50000                         \
 --eval_bleu true                           \
---stopping_criterion valid_mk-en_mt_bleu,10  \ 
+--stopping_criterion valid_mk-en_mt_bleu,10  \
 --validation_metrics valid_mk-en_mt_bleu   \
 --increase_vocab_for_lang en               \
---increase_vocab_from_lang mk              
+--increase_vocab_from_lang mk
 
 ```
 
@@ -233,7 +233,7 @@ python train.py                             \
 --stopping_criterion valid_mk_mlm_ppl,10    \
 --increase_vocab_for_lang en                \
 --increase_vocab_from_lang mk               \
---increase_vocab_by NUMBER (see ./data/mk-en/vocab.mk-en-ext-by-$NUMBER) \
+--increase_vocab_by NUMBER #(see ./data/mk-en/vocab.mk-en-ext-by-$NUMBER) 
 ```
 
 ###3. Train a UNMT model (encoder and decoder initialized with RE-LM + adapters)
@@ -254,7 +254,7 @@ python train.py                            \
 --encoder_only False                       \
 --emb_dim 1024                             \
 --n_layers 6                               \
---n_heads 8                                \ 
+--n_heads 8                                \
 --dropout 0.1                              \
 --attention_dropout 0.1                    \
 --gelu_activation true                     \
@@ -266,7 +266,7 @@ python train.py                            \
 --optimizer adam_inverse_sqrt,beta1=0.9,beta2=0.98,lr=0.0001 \
 --epoch_size 50000                         \
 --eval_bleu true                           \
---stopping_criterion valid_mk-en_mt_bleu,10 \ 
+--stopping_criterion valid_mk-en_mt_bleu,10 \
 --validation_metrics valid_mk-en_mt_bleu   \
 --increase_vocab_for_lang en               \
 --increase_vocab_from_lang mk              
