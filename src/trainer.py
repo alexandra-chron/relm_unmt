@@ -15,7 +15,6 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 from torch.nn.utils import clip_grad_norm_
-import apex
 
 from .optim import get_optimizer
 from .utils import to_cuda, concat_batches, find_modules
@@ -64,6 +63,7 @@ class Trainer(object):
 
         # float16 / distributed (AMP)
         if params.amp >= 0:
+            import apex
             self.init_amp()
             if params.multi_gpu:
                 logger.info("Using apex.parallel.DistributedDataParallel ...")

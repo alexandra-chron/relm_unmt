@@ -46,10 +46,19 @@ Install PyTorch ```1.2.0``` with the desired cuda version to use the GPU:
 
 ``` conda install pytorch==1.2.0 torchvision -c pytorch```
 
+Clone the project:
+
+```
+git clone https://github.com/alexandra-chron/relm_unmt.git
+
+cd relm_unmt
+```
+
+
 Then install the rest of the requirements:
 
 ```
-pip install -r requirements.txt
+pip install -r ./requirements.txt
 ```
 
 
