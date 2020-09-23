@@ -223,7 +223,7 @@ python train.py                             \
 --dropout 0.1                               \
 --attention_dropout 0.1                     \
 --gelu_activation true                      \
---use_adapters True # this enables adapters and freezes Transformer layers (except embed + linear) \
+--use_adapters True                         \
 --adapter_size 256                          \
 --batch_size 32                             \
 --bptt 256                                  \
