@@ -235,9 +235,6 @@ def main(params):
     # load data
     data = load_data(params)
 
-    if params.eval_only and params.encoder_only:
-        params.use_lang_emb = False
-
     # build model
     # reload-model options are in here
     if params.encoder_only:
