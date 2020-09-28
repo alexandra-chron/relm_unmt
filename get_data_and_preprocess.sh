@@ -161,8 +161,15 @@ VOCAB_FINAL=$PROC_PATH/$VOCAB
 echo "Full vocab in: $VOCAB_FINAL"
 
 # binarize data
-if ! [[ -f "$TGT_TRAIN_BPE.pth" ]]; then
+if ! [[ -f "$SRC_TRAIN_BPE.pth" ]]; then
   echo "Binarizing $SRC data..."
+  $MAIN_PATH/preprocess.py $VOCAB_FINAL $SRC_TRAIN_BPE
+fi
+
+echo "$SRC binarized data in: $SRC_TRAIN_BPE.pth"
+
+if ! [[ -f "$TGT_TRAIN_BPE.pth" ]]; then
+  echo "Binarizing $TGT data..."
   $MAIN_PATH/preprocess.py $VOCAB_FINAL $TGT_TRAIN_BPE
 fi
 
@@ -211,7 +218,7 @@ ln $SRC_VALID_BPE.pth $PARA_SRC_VALID_BPE.pth
 ln $TGT_VALID_BPE.pth $PARA_TGT_VALID_BPE.pth
 ln $SRC_TEST_BPE.pth $PARA_SRC_TEST_BPE.pth
 ln $TGT_TEST_BPE.pth $PARA_TGT_TEST_BPE.pth
-ln  $SRC_TRAIN_BPE.pth $PROC_PATH/train.$SRC.pth
+
 # Summary
 
 echo ""
