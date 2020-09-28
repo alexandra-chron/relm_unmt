@@ -205,8 +205,8 @@ echo "Binarizing data..."
 rm -f  $SRC_VALID_BPE.pth $SRC_TEST_BPE.pth
 rm -f  $TGT_VALID_BPE.pth $TGT_TEST_BPE.pth
 
-$MAIN_PATH/preprocess.py $SRC_VOCAB $SRC_VALID_BPE
-$MAIN_PATH/preprocess.py $SRC_VOCAB $SRC_TEST_BPE
+$MAIN_PATH/preprocess.py $VOCAB_FINAL $SRC_VALID_BPE
+$MAIN_PATH/preprocess.py $VOCAB_FINAL $SRC_TEST_BPE
 
 $MAIN_PATH/preprocess.py $VOCAB_FINAL $TGT_VALID_BPE
 $MAIN_PATH/preprocess.py $VOCAB_FINAL $TGT_TEST_BPE

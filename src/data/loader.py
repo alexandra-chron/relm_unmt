@@ -32,7 +32,6 @@ def load_binarized_bin(dict, input):
         else:
             line = dictionary.string(tensor_line)
 
-        print(line)
     return line
 
 
@@ -94,7 +93,6 @@ def set_dico_parameters(params, data, dico):
     Update dictionary parameters.
     """
     if 'dico' in data:
-        #print(data)
         assert data['dico'] == dico
     else:
         data['dico'] = dico
@@ -344,7 +342,6 @@ def check_data_params(params):
         for p in paths.values():
             if not os.path.isfile(p):
                 logger.error(f"{p} not found")
-    print(params.mono_dataset)
     assert all([all([os.path.isfile(p) for p in paths.values()]) for paths in params.mono_dataset.values()])
 
     # check parallel datasets
