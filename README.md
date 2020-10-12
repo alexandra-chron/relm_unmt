@@ -13,13 +13,12 @@ yielding more than +8.3 BLEU points for all four translation directions.
 #### Reference
 
 ```
-@misc{alex2020reusing,
-    title={Reusing a Pretrained Language Model on Languages with Limited Corpora for Unsupervised NMT},
-    author={Alexandra Chronopoulou and Dario Stojanovski and Alexander Fraser},
-    year={2020},
-    eprint={2009.07610},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL}
+@article{chronopoulou2020reusing,
+      title={{R}eusing a {P}retrained {L}anguage {M}odel on {L}anguages with {L}imited Corpora for {U}nsupervised {NMT}}, 
+      author={Alexandra Chronopoulou and Dario Stojanovski and Alexander Fraser},
+      url = {https://arxiv.org/abs/2009.07610},
+       journal={arXiv preprint arXiv:2009.07610},
+       year={2020}
 }
 ```
 
