@@ -1,5 +1,8 @@
 *.py linguist-detectable=true
 *.sh linguist-detectable=true
+*.en linguist-detectable=false
+*.mk linguist-detectable=false
+*.sq linguist-detectable=false
 *.js linguist-detectable=false
 *.html linguist-detectable=false
 *.xml linguist-detectable=false
