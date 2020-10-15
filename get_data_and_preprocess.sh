@@ -103,11 +103,8 @@ PARA_SRC_TEST_BPE=$PROC_PATH/test.$SRC-$TGT.$SRC
 PARA_TGT_TEST_BPE=$PROC_PATH/test.$SRC-$TGT.$TGT
 
 # install tools
-#./install-tools.sh
+#./install-tools.sh (this should have already run in the get_data_mlm_pretraining.sh script)
 
-#
-# Download monolingual data
-#
 
 # preprocessing commands - special case for Romanian
 if [ "$SRC" == "ro" ]; then
