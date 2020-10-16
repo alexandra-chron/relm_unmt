@@ -271,4 +271,4 @@ python train.py                            \
 --increase_vocab_from_lang mk              
 ```
 
-For the XLM baseline, follow the instructions in [XLM github page](https://github.com/facebookresearch/XLM
+For the XLM baseline, follow the instructions in [XLM github page](https://github.com/facebookresearch/XLM)
