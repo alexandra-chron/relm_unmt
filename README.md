@@ -164,7 +164,7 @@ python train.py                            \
 --increase_vocab_by NUMBER #(see ./data/mk-en/vocab.mk-en-ext-by-$NUMBER)
 ```
 
-###3. Train a UNMT model (encoder and decoder initialized with RE-LM)
+### 3. Train a UNMT model (encoder and decoder initialized with RE-LM)
 
 ```
 python train.py                            \
@@ -202,9 +202,9 @@ python train.py                            \
 
 
 ## RE-LM + adapters 
-###1. This step is the same as with RE-LM.
+### 1. This step is the same as with RE-LM.
 
-###2. Fine-tune part of the model on the target language only using adapters
+### 2. Fine-tune part of the model on the target language only using adapters
 
 ```
 python train.py                             \
@@ -235,7 +235,7 @@ python train.py                             \
 --increase_vocab_by NUMBER #(see ./data/mk-en/vocab.mk-en-ext-by-$NUMBER) 
 ```
 
-###3. Train a UNMT model (encoder and decoder initialized with RE-LM + adapters)
+### 3. Train a UNMT model (encoder and decoder initialized with RE-LM + adapters)
 
 ```
 python train.py                            \
