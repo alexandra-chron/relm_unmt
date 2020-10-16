@@ -17,7 +17,7 @@ yielding more than +8.3 BLEU points for all four translation directions.
       title={{R}eusing a {P}retrained {L}anguage {M}odel on {L}anguages with {L}imited Corpora for {U}nsupervised {NMT}}, 
       author={Alexandra Chronopoulou and Dario Stojanovski and Alexander Fraser},
       url = {https://arxiv.org/abs/2009.07610},
-       journal={arXiv preprint arXiv:2009.07610},
+       journal={Proceedings of the Conference on Empirical Methods in Natural Language Processing},
        year={2020}
 }
 ```
