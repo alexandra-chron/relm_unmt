@@ -1,4 +1,4 @@
-This repository contains source code for our EMNLP 2020 paper "Reusing a Pretrained Language Model on Languages with Limited Corpora for Unsupervised NMT"  [(Paper link)](http://statmt.org/wmt20/pdf/2020.wmt-1.128.pdf)
+This repository contains source code for our EMNLP 2020 paper "Reusing a Pretrained Language Model on Languages with Limited Corpora for Unsupervised NMT"  [(Paper link)](https://www.aclweb.org/anthology/2020.emnlp-main.214/)
 
 # Introduction 
 
