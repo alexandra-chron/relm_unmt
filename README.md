@@ -10,24 +10,6 @@ Our method, entitled **RE-LM**, provides very competitive UNMT results in low-re
 high-resource language pairs, outperforming XLM  in English-Macedonian (En-Mk) and English-Albanian (En-Sq), 
 yielding more than +8.3 BLEU points for all four translation directions.
 
-#### Reference
-
-```
-@inproceedings{chronopoulou-etal-2020-reusing,
-    title = "{R}eusing a {P}retrained {L}anguage {M}odel on {L}anguages with {L}imited {C}orpora for {U}nsupervised {NMT}",
-    author = "Chronopoulou, Alexandra  and
-      Stojanovski, Dario  and
-      Fraser, Alexander",
-    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-    month = nov,
-    year = "2020",
-    address = "Online",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/2020.emnlp-main.214",
-    pages = "2703--2711",
-}
-```
-
 This code is built on using the [XLM](https://github.com/facebookresearch/XLM) baseline, which is publicly available. 
 
 # Prerequisites 
@@ -66,6 +48,7 @@ Then install the rest of the requirements:
 pip install -r ./requirements.txt
 ```
 
+It is **HIGHLY recommended** to use half precision (using [Apex](https://github.com/NVIDIA/apex#quick-start)) by simply adding `--fp16 True --amp 1` flags to each running command. Without it, you might run out of memory.
 
 To [train with multiple GPUs](https://github.com/facebookresearch/XLM#how-can-i-run-experiments-on-multiple-gpus) use:
 ```
@@ -278,3 +261,23 @@ python train.py                            \
 ```
 
 For the XLM baseline, follow the instructions in [XLM github page](https://github.com/facebookresearch/XLM)
+
+If you use our work, please cite our paper: 
+
+#### Reference
+
+```
+@inproceedings{chronopoulou-etal-2020-reusing,
+    title = "{R}eusing a {P}retrained {L}anguage {M}odel on {L}anguages with {L}imited {C}orpora for {U}nsupervised {NMT}",
+    author = "Chronopoulou, Alexandra  and
+      Stojanovski, Dario  and
+      Fraser, Alexander",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.214",
+    pages = "2703--2711",
+}
+```
