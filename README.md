@@ -50,9 +50,14 @@ pip install -r ./requirements.txt
 
 It is **HIGHLY recommended** to use half precision (using [Apex](https://github.com/NVIDIA/apex#quick-start)) by simply adding `--fp16 True --amp 1` flags to each running command. Without it, you might run out of memory.
 
-To [train with multiple GPUs](https://github.com/facebookresearch/XLM#how-can-i-run-experiments-on-multiple-gpus) use:
+To train with multiple GPUs use:
 ```
 export NGPU=8; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py
+```
+
+To train with multiple GPUs and half precision use:
+```
+export NGPU=8; python -m torch.distributed.launch --nproc_per_node=$NGPU train.py --fp16 True --amp 1 
 ```
 
 #### Download data 
