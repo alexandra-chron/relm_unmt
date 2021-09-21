@@ -3,7 +3,7 @@ This repository contains source code for our EMNLP 2020 paper "Reusing a Pretrai
 # Introduction 
 
 This paper presents a method to fine-tune of a pretrained monolingual LM (on a high-resource language) to a low-resource language,
- in order to serve as initialization of an Unsupervised NMT (UNMT) encoder-decoder model. 
+to serve as initialization of an Unsupervised NMT (UNMT) encoder-decoder model. 
  To this end, we propose a vocabulary extension method to allow fine-tuning. 
  
 Our method, entitled **RE-LM**, provides very competitive UNMT results in low-resource - 
