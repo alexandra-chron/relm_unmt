@@ -103,8 +103,8 @@ python train.py                            \
 --bptt 256                                 \
 --optimizer 'adam,lr=0.0001'               \
 --epoch_size 200000                        \
---validation_metrics valid_en_mlm_ppl      \
---stopping_criterion 'valid_en_mlm_ppl,10' 
+--validation_metrics _valid_en_mlm_ppl      \
+--stopping_criterion '_valid_en_mlm_ppl,10' 
 
 ## There are other parameters that are not specified here (see train.py).
 ```
@@ -151,8 +151,8 @@ python train.py                            \
 --bptt 256                                 \
 --optimizer adam,lr=0.0001                 \
 --epoch_size 50000                         \
---validation_metrics valid_mk_mlm_ppl      \
---stopping_criterion valid_mk_mlm_ppl,10   \
+--validation_metrics _valid_mk_mlm_ppl      \
+--stopping_criterion _valid_mk_mlm_ppl,10   \
 --increase_vocab_for_lang en               \
 --increase_vocab_from_lang mk              \
 --increase_vocab_by NUMBER #(see ./data/mk-en/vocab.mk-en-ext-by-$NUMBER)
@@ -222,8 +222,8 @@ python train.py                             \
 --bptt 256                                  \
 --optimizer adam,lr=0.0001                  \
 --epoch_size 50000                          \
---validation_metrics valid_mk_mlm_ppl       \
---stopping_criterion valid_mk_mlm_ppl,10    \
+--validation_metrics _valid_mk_mlm_ppl       \
+--stopping_criterion _valid_mk_mlm_ppl,10    \
 --increase_vocab_for_lang en                \
 --increase_vocab_from_lang mk               \
 --increase_vocab_by NUMBER #(see ./data/mk-en/vocab.mk-en-ext-by-$NUMBER) 
