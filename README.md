@@ -108,6 +108,10 @@ python train.py                            \
 
 ## There are other parameters that are not specified here (see train.py).
 ```
+Alternatively, you can **download** the pretrained En MLM (as well as the vocabulary and BPE codes) that we used using this link:
+
+```wget https://www.dropbox.com/s/nrhnyyjuncbwx71/pretrained_en_mlm.zip?dl=0```
+
 
 ## Preprocessing for fine-tuning (and UNMT)
 
